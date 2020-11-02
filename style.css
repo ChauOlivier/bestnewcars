@@ -1,0 +1,352 @@
+body, ul {
+    margin : auto 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1em;
+}
+
+/* Barre de navigation */
+
+.navbar {
+    background-color: rgba(17, 17, 17);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5em;
+}
+
+.navbar-nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    column-gap: 2em;
+    padding-right: 4em;
+}
+/* 
+nav {
+    background-color: rgba(15,15,15,0.4);
+    display: flex;
+    color: whitesmoke;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    column-gap: 3em;
+    
+}
+
+.logo { 
+    height: 55px;
+    width: 50px;
+    margin-right: 0px;
+}
+
+.push {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5em;
+    margin-right: auto;
+    font-size: 1.4em;
+}
+
+.contacts {
+    margin-right: 1.5em;
+}
+ */
+
+/* Titres */
+
+/* .annonce {
+    height: 40px;
+    width: 100%;
+    background-color:rgb(255, 158, 21) ;
+    text-align: center;
+    padding: 10px 0px;
+} */
+.banner {
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    display: grid;
+    grid-template-rows: auto 40%;
+}
+
+.title_container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: whitesmoke;
+    margin-bottom: 25px;
+}
+
+.big_title {
+    font-weight: bold;
+    font-size: 5em;
+    margin-bottom: 0px;
+}
+
+.action_container {
+    color: whitesmoke;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.action {
+    border: solid white;
+    padding: 1em;
+    border-radius: 30px;
+    font-weight: bold;
+    color: black;
+    background-color: whitesmoke;
+    margin-top: 30px;
+    text-decoration: none;
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -o-transition: background-color 1s ease;
+    transition: background-color 1s ease;
+    -webkit-transition: border 1s ease;
+    -moz-transition: border 1s ease;
+    -o-transition: border 1s ease;
+    transition: border 1s ease;
+} 
+
+:hover.action {
+    border: solid rgb(255, 158, 21);
+    background-color: rgb(255, 158, 21);
+    animation: pulse;
+    animation-duration: 1s;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Prestation */
+
+.presta {
+        
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+    grid-gap: 50px 40px;
+    padding: 100px 200px;
+}
+
+.box {
+    display: grid;
+    grid-template-rows: 40% auto 20%;
+
+    background-color: RGBA(219, 218, 216,1) ;
+    width: 100%;
+    height: 500px;
+    border-radius: 0.5em;
+    align-items: flex-start;
+    justify-items: center;
+    
+    -webkit-transition: box-shadow 1s ease;
+    -moz-transition: box-shadow 1s ease;
+    -o-transition: box-shadowr 1s ease;
+    transition: box-shadow 1s ease;
+}
+
+:hover.box {
+    box-shadow: 1px 1px 7px;
+}
+
+.box img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%; 
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    
+}
+
+.description {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 0px;
+    padding: 0px 40px;
+}
+
+.yellowbutton {
+    margin-top: 5px;
+    padding : 15px 30px;
+    border: solid 1px rgb(255, 158, 21);
+    border-radius: 0.5em;
+
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 158, 21);
+    font-weight: bold;
+
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -o-transition: background-color 1s ease;
+    transition: background-color 1s ease;
+}
+
+:hover.yellowbutton {
+    background-color: rgba(255, 158, 21,0.5);
+    text-decoration: none;
+    color: black;   
+}
+
+@media screen and (max-width: 1550px) { 
+    .presta {
+        grid-gap: 50px 40px;
+        padding: 100px 100px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1350px) { 
+    .presta {
+        grid-gap: 50px 60px;
+        padding: 50px 50px;
+    }
+    
+}
+
+@media screen and (max-width: 850px) { 
+    .presta {
+
+        display: flex;
+        flex-direction: column;
+        padding: 50px 50px;
+    }
+
+    .box {
+        height: fit-content;
+    }
+    
+}
+
+@media screen and (max-width: 650px) { 
+    .big_title {
+        font-size: 3em;
+    }
+    
+    .banner {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 450px) { 
+    .big_title {
+        font-size: 2em;
+    }
+    
+    .subtitle {
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+        margin: 10px 0px;
+
+    }
+
+    .yellowbutton {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) { 
+  
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 30px;
+        max-height: 400px;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    .detail {
+        padding: 0px 15px
+    }
+
+    .detail, .yellowbutton {
+        font-size: 0.8em;
+    }
+
+    .yellowbutton {
+        padding: 7px 15px;
+    }
+
+}
+
+/* Boutique*/
+
+.boutique {
+    display: flex;
+    row-gap: 1.5em;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+h1 {
+    font-weight: bold;
+    justify-content: center;
+}
+
+.horaires {
+    padding-bottom: 2em;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+
+footer{
+    background-color: rgba(17, 17, 17);
+    height:70px;
+}
+
+
+@media screen and (max-width: 650px) { 
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 450px) { 
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .boutique p {
+        font-size: 0.8em;
+    }
+}
